@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Song App</title>
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="css/application.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- The Ist Screen -->
+    <section class="welcome-screen">
+      <h1 style="color: Gray"> Welcome to Songify </h1>
+      <h3 style="color: Gray"> Enter name to access your account </h3>
+      <div class="input-wrapper">
+        <input type="text" placeholder="Name" id="name-input">
+        <button style="cursor: pointer"> Log In </button>
+      </div>
+    </section>
+    <!-- The 2nd screen -->
+    <div class="main hidden">
+      <header>
+        <button style="cursor: pointer; float: right; margin-left: 20px" class="button">Log Out</button>
+        <div class="right floated user-name"> </div>
+      </header>
+      <section class="content">
+        <!-- in audio tag given songs which will be played -->
+        <audio src="songs/song1.mp3"></audio>
+        <table id="songs">
+          <thead class="list-headers">
+            <tr>
+              <td> Title </td>
+              <td> Artist </td>
+              <td> Album </td>
+              <td> Duration </td>
+            </tr>
+          </thead>
+          <!-- <div class="song-list"> -->
+          <tbody class="song-list">
+            <tr class="song" id="song1">
+              <td class="song-name"></td>
+              <td class="song-artist"></td>
+              <td class="song-album"></td>
+              <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="song2">
+              <td class="song-name"></td>
+              <td class="song-artist"></td>
+              <td class="song-album"></td>
+              <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="song3">
+              <td class="song-name"></td>
+              <td class="song-artist"></td>
+              <td class="song-album"></td>
+              <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="song4">
+              <td class="song-name"></td>
+              <td class="song-artist"></td>
+              <td class="song-album"></td>
+              <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="song5">
+              <td class="song-name"></td>
+              <td class="song-artist"></td>
+              <td class="song-album"></td>
+              <td class="song-length"></td>
+            </tr>
+            <!-- </div> -->
+          </tbody>
+        </table>
+        <div class="current-song-wrapper">
+          <img src="" class="current-song-image">
+          <div>
+            <p class="current-song-name"></p>
+            <p class="current-song-album"></p>
+          </div>
+        </div>
+      </section>
+      <!-- The visualizer screen -->
+      <div class="contain"></div>
+      <!-- The audio effect screen -->
+      <div class="containeffect">
+        <div class="contain-in">
+          <div style="display:flex">
+            <div class="contain-inside delay">Delay</div>
+            <div class="contain-inside wahwah">Wahwah</div>
+            <div class="contain-inside tremolo">Tremolo</div>
+            <div class="contain-inside filter">Filter</div>
+            <div class="contain-inside chorus">Chorus</div>
+            <div class="contain-inside phaser">Phaser</div>
+          </div>
+          <div style="display:flex; margin-top:20px">
+            <div class="contain-inside compressor">Compressor</div>
+            <div class="contain-inside overdrive">Overdrive</div>
+            <div class="contain-inside cabinet">Cabinet</div>
+            <div class="contain-inside convolver">Convolver</div>
+          </div>
+        </div>
+      </div>
+      <!-- voice recognition commands -->
+      <ol style="position: absolute;top: 391px;left: 58%;font-size: 13px;border: 1px solid;display:none">
+        <p> Commands </p>
+        <li>Play the song</li>
+        <li>Repeat</li>
+        <li>Next song </li>
+        <li>Visualizer</li>
+        <li>Pause the Song</li>
+        <li>Shuffle</li>
+        <li>Previous song</li>
+      </ol>
+      <!-- footer Containing all the icons and the progress bar -->
+      <footer>
+        <div class="controls">
+          <div class="player-buttons">
+            <i class="fa fa-random clickable shuffle-icon" aria-hidden="true"></i>
+            <i class="fa fa-step-backward clickable previous-icon" aria-hidden="true"></i>
+            <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+            <i class="fa fa-step-forward clickable next-icon" aria-hidden="true"></i>
+            <i class="fa fa-repeat clickable repeat-icon" aria-hidden="true"></i>
+            <i class="fa fa-bar-chart clickable bar-icon" aria-hidden="true"></i>
+            <i class="fa fa-microphone clickable voice-icon" aria-hidden="true"></i>
+            <i class="fa fa-toggle-on clickable toggle-icon" aria-hidden="true"></i>
+          </div>
+          <!-- containing the time-elapsed, duration, and progrss-bar -->
+          <div class="progress-wrapper">
+            <span class="time-elapsed"> </span>
+            <div class="player-progress">
+              <div class="progress-filled"></div>
+            </div>
+            <span class="song-duration"></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- using javascripts -->
+  <script src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/voice.js"></script>
+  <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/tuna.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/appeffect.js"></script>
+</body>
+</html>
