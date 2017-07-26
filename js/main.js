@@ -380,7 +380,7 @@ var songs = [{
   'name': 'Kuch Toh Hain & Kaun Tujhe',
   'artist': 'Armaan Malik',
   'album': 'Love Mashup',
-  'duration': '2:29',
+  'duration': '3:40',
   'fileName': 'song5.mp3',
   'image':'song5.jpg'
 },
